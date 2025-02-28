@@ -1,21 +1,32 @@
 package org.example.Entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class NPC implements CloneableGameEntity {
     private String npcName;
     private String npcDescription;
     private int npcHealth;
+    private List<String> skills;
 
     public NPC(String npcName, String npcDescription, int npcHealth) {
         this.npcName = npcName;
         this.npcDescription = npcDescription;
         this.npcHealth = npcHealth;
+        this.skills = new ArrayList<>();
     }
 
     public String toString() {
-        return npcName + ":\nHP:" + npcHealth + "\n" + npcDescription;
-
+        return npcName + ": HP:" + npcHealth + "\n" + npcDescription + "\nSkills: " + skills;
     }
 
+    public void addSkill(String skill) {
+        skills.add(skill);
+    }
+
+    public List<String> getSkills() {
+        return skills;
+    }
     public String getNpcName() {
         return npcName;
     }
@@ -42,6 +53,8 @@ public class NPC implements CloneableGameEntity {
 
 
     public NPC cloneEntity() {
-        return new NPC(this.npcName + " (Clone)", this.npcDescription, this.npcHealth);
-    }
+        NPC clone = new NPC(this.npcName, this.npcDescription, this.npcHealth);
+
+        clone.skills = new ArrayList<>(this.skills);
+        return clone;}
 }

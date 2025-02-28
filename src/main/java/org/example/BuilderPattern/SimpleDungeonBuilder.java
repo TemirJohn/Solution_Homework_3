@@ -10,11 +10,12 @@ public class SimpleDungeonBuilder implements IDungeonBuilder {
     private String name;
     private List<Room> rooms = new ArrayList<>();
     private List<NPC> npcs = new ArrayList<>();
+    private List<String> traps = new ArrayList<>();
+    private List<String> treasures = new ArrayList<>();
 
     public SimpleDungeonBuilder(String name) {
         this.name = name;
     }
-
 
     public IDungeonBuilder setDungeonName(String name) {
         this.name = name;
@@ -40,6 +41,15 @@ public class SimpleDungeonBuilder implements IDungeonBuilder {
         rooms.add(room.cloneEntity());
         return this;
     }
+    public IDungeonBuilder addTrap(String trap) {
+        traps.add(trap);
+        return this;
+    }
+
+    public IDungeonBuilder addTreasure(String treasure) {
+        treasures.add(treasure);
+        return this;
+    }
 
     public Room getRoom(int index) {
         if (index >= 0 && index < rooms.size()) {
@@ -60,6 +70,6 @@ public class SimpleDungeonBuilder implements IDungeonBuilder {
 
 
     public Dungeon build() {
-        return new Dungeon(name, rooms, npcs);
+        return new Dungeon(name, rooms, npcs, traps, treasures);
     }
 }

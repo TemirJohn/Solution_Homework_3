@@ -9,6 +9,8 @@ public interface IDungeonBuilder {
     IDungeonBuilder addNPC(NPC npc);
     IDungeonBuilder addCloneNPC(NPC npc);
     IDungeonBuilder addCloneRoom(Room room);
+    IDungeonBuilder addTrap(String trap);
+    IDungeonBuilder addTreasure(String treasure);
     Dungeon build();
 }
 

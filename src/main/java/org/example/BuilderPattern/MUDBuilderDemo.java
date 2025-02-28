@@ -12,6 +12,8 @@ public class MUDBuilderDemo {
                 .addRoom(new Room("Monster Lair", "A chilling cave where monsters dwell."))
                 .addNPC(new NPC("Goblin", "A small but dangerous creature.", 50))
                 .addNPC(new NPC("Dragon", "A mighty beast guarding the treasure!", 500))
+                .addTrap("Poison Spikes")
+                .addTreasure("Ancient Sword")
                 .build();
 
         System.out.println("Builded dungeon:");

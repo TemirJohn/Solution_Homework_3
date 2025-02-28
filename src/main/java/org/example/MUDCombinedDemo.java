@@ -13,6 +13,8 @@ public class MUDCombinedDemo {
         builder.addNPC(GoblinOrig);
         builder.addRoom(EntranceOrig);
         builder.addCloneNPC(GoblinOrig);
+        builder.addTrap("Poison Spikes");
+        builder.addTreasure("Ancient Sword");
 
         builder.addCloneRoom(EntranceOrig);
         builder.getRoom(1).setRoomName("The Light cave");
