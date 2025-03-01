@@ -16,13 +16,15 @@ public class MUDCombinedDemo {
         builder.addTrap("Poison Spikes");
         builder.addTreasure("Ancient Sword");
 
+        Room clone1 = EntranceOrig.clone();
+        System.out.println("Original Room: " + EntranceOrig.getRoomName());
+        System.out.println("Cloned Rooms:");
+        System.out.println(clone1.getRoomName());
+
         builder.addCloneRoom(EntranceOrig);
         builder.getRoom(1).setRoomName("The Light cave");
         builder.getNpc(1).setNpcName("Angel");
         Dungeon dungeon = builder.build();
         System.out.println(dungeon);
-
-        if (builder.getRoom(1) != null) builder.getRoom(1).setRoomName("The Light cave");
-        if (builder.getNpc(1) != null) builder.getNpc(1).setNpcName("Angel");
     }
 }

@@ -82,6 +82,24 @@ public class Dungeon {
             result+=(i+1) +". " + dungeonNPCs.get(i) + "\n";
         }
 
+        if (!traps.isEmpty()) {
+            result+="\nTraps in the dungeon:\n";
+            for (int i = 0; i < traps.size(); i++) {
+                result += (i + 1) + ". " + traps.get(i) + "\n";
+            }
+        } else {
+            result += ("\nNo traps in the dungeon.\n");
+        }
+
+        if (!treasures.isEmpty()) {
+            result+=("\nTreasures in the dungeon:\n");
+            for (int i = 0; i < treasures.size(); i++) {
+                result += (i + 1) + ". " + treasures.get(i) + "\n";
+            }
+        } else {
+            result+=("\nNo treasures in the dungeon.\n");
+        }
+
         return result;
     }
 }
