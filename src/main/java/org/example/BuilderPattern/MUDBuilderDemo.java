@@ -1,7 +1,7 @@
 package org.example.BuilderPattern;
 
-import org.example.Entity.NPC;
-import org.example.Entity.Room;
+import org.example.PrototypePattern.NPC;
+import org.example.PrototypePattern.Room;
 
 public class MUDBuilderDemo {
     public static void main(String[] args) {

@@ -1,9 +1,9 @@
-package org.example.Entity;
+package org.example.PrototypePattern;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Room implements CloneableGameEntity{
+public class Room implements CloneableGame {
     private String roomName;
     private String roomDescription;
     private List<String> items;
@@ -43,7 +43,7 @@ public class Room implements CloneableGameEntity{
         return roomName + "\n" + roomDescription + "\nItems: " + items;
     }
 
-    public Room cloneEntity() {
+    public Room clone() {
         Room clone = new Room(this.roomName, this.roomDescription);
 
         clone.items = new ArrayList<>(this.items);

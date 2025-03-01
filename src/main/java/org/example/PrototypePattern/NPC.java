@@ -1,9 +1,9 @@
-package org.example.Entity;
+package org.example.PrototypePattern;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class NPC implements CloneableGameEntity {
+public class NPC implements CloneableGame {
     private String npcName;
     private String npcDescription;
     private int npcHealth;
@@ -52,7 +52,7 @@ public class NPC implements CloneableGameEntity {
     }
 
 
-    public NPC cloneEntity() {
+    public NPC clone() {
         NPC clone = new NPC(this.npcName, this.npcDescription, this.npcHealth);
 
         clone.skills = new ArrayList<>(this.skills);

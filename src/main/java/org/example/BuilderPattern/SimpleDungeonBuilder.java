@@ -1,7 +1,7 @@
 package org.example.BuilderPattern;
 
-import org.example.Entity.NPC;
-import org.example.Entity.Room;
+import org.example.PrototypePattern.NPC;
+import org.example.PrototypePattern.Room;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,12 +33,12 @@ public class SimpleDungeonBuilder implements IDungeonBuilder {
     }
 
     public IDungeonBuilder addCloneNPC(NPC npc){
-        npcs.add(npc.cloneEntity());
+        npcs.add(npc.clone());
         return this;
     }
 
     public IDungeonBuilder addCloneRoom(Room room){
-        rooms.add(room.cloneEntity());
+        rooms.add(room.clone());
         return this;
     }
     public IDungeonBuilder addTrap(String trap) {
@@ -67,7 +67,6 @@ public class SimpleDungeonBuilder implements IDungeonBuilder {
     public String getName() {
         return name;
     }
-
 
     public Dungeon build() {
         return new Dungeon(name, rooms, npcs, traps, treasures);

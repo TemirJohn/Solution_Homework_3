@@ -1,7 +1,7 @@
 package org.example.BuilderPattern;
 
-import org.example.Entity.NPC;
-import org.example.Entity.Room;
+import org.example.PrototypePattern.NPC;
+import org.example.PrototypePattern.Room;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,8 +61,13 @@ public class Dungeon {
         this.dungeonName = dungeonName;
     }
 
-    public void addTrap(String trap) { traps.add(trap); }
-    public void addTreasure(String treasure) { treasures.add(treasure); }
+    public void addTrap(String trap) {
+        traps.add(trap);
+    }
+
+    public void addTreasure(String treasure) {
+        treasures.add(treasure);
+    }
 
     public String toString() {
         String result = "Dungeon: " + dungeonName;

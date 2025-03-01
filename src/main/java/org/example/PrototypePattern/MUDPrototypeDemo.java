@@ -1,4 +1,4 @@
-package org.example.Entity;
+package org.example.PrototypePattern;
 
 public class MUDPrototypeDemo {
     public static void main(String[] args) {
@@ -10,8 +10,8 @@ public class MUDPrototypeDemo {
         npc.addSkill("Stealth");
         npc.addSkill("Ambush");
 
-        NPC npcClone = npc.cloneEntity();
-        Room roomClone = room.cloneEntity();
+        NPC npcClone = npc.clone();
+        Room roomClone = room.clone();
 
         System.out.println("Original:\n" + room + "\n" + npc);
         System.out.println("Clone:\n" + roomClone + "\n" + npcClone);

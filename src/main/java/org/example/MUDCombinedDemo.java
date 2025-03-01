@@ -2,8 +2,8 @@ package org.example;
 
 import org.example.BuilderPattern.Dungeon;
 import org.example.BuilderPattern.SimpleDungeonBuilder;
-import org.example.Entity.NPC;
-import org.example.Entity.Room;
+import org.example.PrototypePattern.NPC;
+import org.example.PrototypePattern.Room;
 
 public class MUDCombinedDemo {
     public static void main(String[] args) {
